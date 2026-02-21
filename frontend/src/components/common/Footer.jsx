@@ -46,13 +46,22 @@ const Footer = () => {
                 </div>
             </div>
 
-            <div className="footer-bottom">
-                <span>© 2026 ResumeForge. All rights reserved.</span>
-                <div className="footer-socials">
-                    <a href="#" className="footer-social"><FiGithub /></a>
-                    <a href="#" className="footer-social"><FiTwitter /></a>
-                    <a href="#" className="footer-social"><FiLinkedin /></a>
+            <div className="footer-bottom" style={{ flexDirection: 'column', gap: '12px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '18px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                    <span style={{ fontSize: '13px', fontWeight: 600, color: 'var(--text-secondary)', letterSpacing: '1px', textTransform: 'uppercase' }}>Creator</span>
+                    <a href="https://github.com/Jeet1511" target="_blank" rel="noopener noreferrer" className="footer-social" style={{ display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none', color: 'var(--text-secondary)', fontSize: '13px' }}>
+                        <FiGithub /> jeet1511
+                    </a>
+                    <a href="https://instagram.com/_echo.del.alma_" target="_blank" rel="noopener noreferrer" className="footer-social" style={{ display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none', color: 'var(--text-secondary)', fontSize: '13px' }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
+                        _echo.del.alma_
+                    </a>
+                    <a href="mailto:jeetmondal@gmail.com" className="footer-social" style={{ display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none', color: 'var(--text-secondary)', fontSize: '13px' }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                        Jeet (jeetmondal@gmail.com)
+                    </a>
                 </div>
+                <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>© 2026 ResumeForge. All rights reserved.</span>
             </div>
         </footer>
     );
