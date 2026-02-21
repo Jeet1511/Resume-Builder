@@ -1,4 +1,4 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { useState } from 'react';
@@ -6,11 +6,23 @@ import { useState } from 'react';
 const Navbar = () => {
     const { user, isAuthenticated, logout } = useAuth();
     const navigate = useNavigate();
+    const location = useLocation();
     const [mobileOpen, setMobileOpen] = useState(false);
 
     const handleLogout = () => {
         logout();
         navigate('/');
+    };
+
+    const scrollToTemplates = () => {
+        if (location.pathname !== '/') {
+            navigate('/');
+            setTimeout(() => {
+                document.getElementById('templates')?.scrollIntoView({ behavior: 'smooth' });
+            }, 300);
+        } else {
+            document.getElementById('templates')?.scrollIntoView({ behavior: 'smooth' });
+        }
     };
 
     return (
@@ -21,7 +33,7 @@ const Navbar = () => {
 
             <div className="navbar-links">
                 <Link to="/" className="navbar-link">Home</Link>
-                <Link to="/#templates" className="navbar-link">Templates</Link>
+                <button onClick={scrollToTemplates} className="navbar-link" style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', color: 'inherit', padding: 0 }}>Templates</button>
                 {isAuthenticated && <Link to="/dashboard" className="navbar-link">Dashboard</Link>}
             </div>
 

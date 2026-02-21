@@ -67,9 +67,9 @@ const Home = () => {
                     </p>
 
                     <div className="hero-actions">
-                        <Link to="/#templates" className="btn btn-primary btn-lg">
+                        <button onClick={() => document.getElementById('templates')?.scrollIntoView({ behavior: 'smooth' })} className="btn btn-primary btn-lg">
                             Browse Templates <FiArrowRight />
-                        </Link>
+                        </button>
                         {!isAuthenticated && (
                             <Link to="/signup" className="btn btn-secondary btn-lg">
                                 Create Free Account
@@ -184,9 +184,9 @@ const Home = () => {
                     Start building for free today. No credit card required.
                 </p>
                 <div className="hero-actions">
-                    <Link to="/#templates" className="btn btn-primary btn-lg">
+                    <button onClick={() => document.getElementById('templates')?.scrollIntoView({ behavior: 'smooth' })} className="btn btn-primary btn-lg">
                         Get Started Now <FiArrowRight />
-                    </Link>
+                    </button>
                 </div>
             </section>
         </div>
