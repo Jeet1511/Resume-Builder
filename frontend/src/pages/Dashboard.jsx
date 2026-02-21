@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-import { templates } from '../data/templates';
+import { templates, sampleResumeData } from '../data/templates';
+import TemplatePreviewMini from '../components/resume/TemplatePreviewMini';
 import api from '../services/api';
 import { FiPlus, FiEdit2, FiTrash2, FiDownload, FiGrid, FiFileText, FiSettings, FiLayout } from 'react-icons/fi';
 
@@ -144,18 +145,13 @@ const Dashboard = () => {
                         <div className="templates-grid">
                             {templates.map(template => (
                                 <div key={template.id} className="glass-card template-card" onClick={() => handleCreateNew(template.id)}>
-                                    <div className="template-preview" style={{
-                                        background: template.color,
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                        flexDirection: 'column',
-                                        gap: '0.5rem',
-                                        color: 'white',
-                                        padding: '2rem',
-                                    }}>
-                                        <div style={{ fontSize: 'var(--fs-xl)', fontWeight: '700' }}>{template.name}</div>
-                                        <div style={{ fontSize: 'var(--fs-xs)', opacity: 0.7 }}>{template.description}</div>
+                                    <div className="template-preview">
+                                        <TemplatePreviewMini
+                                            template={template}
+                                            data={sampleResumeData}
+                                            color={template.color}
+                                            accent={template.accent}
+                                        />
                                     </div>
                                     <div className="template-info">
                                         <div>
@@ -206,16 +202,13 @@ const Dashboard = () => {
                                         onClick={() => { setShowTemplateModal(false); handleCreateNew(template.id); }}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        <div className="template-preview" style={{
-                                            background: template.color,
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            color: 'white',
-                                            fontSize: 'var(--fs-lg)',
-                                            fontWeight: '700',
-                                        }}>
-                                            {template.name}
+                                        <div className="template-preview">
+                                            <TemplatePreviewMini
+                                                template={template}
+                                                data={sampleResumeData}
+                                                color={template.color}
+                                                accent={template.accent}
+                                            />
                                         </div>
                                         <div className="template-info">
                                             <div>

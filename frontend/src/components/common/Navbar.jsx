@@ -31,10 +31,10 @@ const Navbar = () => {
                 <span>ResumeForge</span>
             </Link>
 
-            <div className="navbar-links">
-                <Link to="/" className="navbar-link">Home</Link>
-                <button onClick={scrollToTemplates} className="navbar-link" style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', color: 'inherit', padding: 0 }}>Templates</button>
-                {isAuthenticated && <Link to="/dashboard" className="navbar-link">Dashboard</Link>}
+            <div className={`navbar-links ${mobileOpen ? 'mobile-open' : ''}`}>
+                <Link to="/" className="navbar-link" onClick={() => setMobileOpen(false)}>Home</Link>
+                <button onClick={() => { scrollToTemplates(); setMobileOpen(false); }} className="navbar-link" style={{ background: 'none', border: 'none', cursor: 'pointer', font: 'inherit', color: 'inherit', padding: 0 }}>Templates</button>
+                {isAuthenticated && <Link to="/dashboard" className="navbar-link" onClick={() => setMobileOpen(false)}>Dashboard</Link>}
             </div>
 
             <div className="navbar-actions">
