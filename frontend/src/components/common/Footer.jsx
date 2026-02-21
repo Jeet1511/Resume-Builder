@@ -58,7 +58,7 @@ const Footer = () => {
                     </a>
                     <a href="mailto:jeetmondal@gmail.com" className="footer-social" style={{ display: 'flex', alignItems: 'center', gap: '6px', textDecoration: 'none', color: 'var(--text-secondary)', fontSize: '13px' }}>
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
-                        Jeet (jeetmondal@gmail.com)
+                        Jeet
                     </a>
                 </div>
                 <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>© 2026 ResumeForge. All rights reserved.</span>
