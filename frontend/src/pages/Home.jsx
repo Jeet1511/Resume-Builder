@@ -101,7 +101,7 @@ const Home = () => {
                         Everything You Need to <span className="highlight">Land the Job</span>
                     </h2>
                     <p className="section-subtitle">
-                        Our resume builder gives you all the tools to create a professional resume that gets you noticed.
+                        Evo Frame gives you all the tools to create a professional resume that gets you noticed.
                     </p>
                 </div>
 

@@ -1,4 +1,4 @@
-# ResumeForge — Professional Resume Builder
+# Evo Frame — Professional Resume Builder
 
 Full-stack resume builder with 20 professional templates, PDF/Word export, and user authentication.
 

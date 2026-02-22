@@ -41,7 +41,7 @@ app.use('/api/resumes', resumeRoutes);
 
 // Health check
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'ok', message: 'ResumeForge API is running' });
+    res.json({ status: 'ok', message: 'Evo Frame API is running' });
 });
 
 // Connect to DB and start server

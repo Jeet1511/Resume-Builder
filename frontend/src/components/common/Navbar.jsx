@@ -28,7 +28,7 @@ const Navbar = () => {
     return (
         <nav className="navbar">
             <Link to="/" className="navbar-brand">
-                <span>ResumeForge</span>
+                <span>Evo Frame</span>
             </Link>
 
             <div className={`navbar-links ${mobileOpen ? 'mobile-open' : ''}`}>

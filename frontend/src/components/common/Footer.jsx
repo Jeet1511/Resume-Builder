@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="footer-content">
                 <div>
                     <div className="footer-brand">
-                        <span>ResumeForge</span>
+                        <span>Evo Frame</span>
                     </div>
                     <p className="footer-description">
                         Create professional resumes in minutes with our stunning templates.
@@ -61,7 +61,7 @@ const Footer = () => {
                         Jeet
                     </a>
                 </div>
-                <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>© 2026 ResumeForge. All rights reserved.</span>
+                <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>© 2026 Evo Frame. All rights reserved.</span>
             </div>
         </footer>
     );

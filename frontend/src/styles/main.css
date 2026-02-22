@@ -1,5 +1,5 @@
 /* ============================================
-   ResumeForge — Design System
+   Evo Frame — Design System
    ============================================ */
 
 /* CSS Custom Properties */
@@ -991,7 +991,7 @@ select.form-input option:checked {
 }
 
 /* ============================================
-   Resume Builder Page
+   Evo Frame Page
    ============================================ */
 .builder-page {
   padding-top: var(--navbar-height);
